@@ -1,0 +1,79 @@
+<!-- Header -->
+<header class="lp-header">
+  <div class="lp-header-left">
+    <img [src]="logo" alt="MiniMayhem Arcade Hub Logo" class="lp-logo neon-glow" />
+    <nav>
+      <a *ngFor="let link of navLinks" [routerLink]="link.path" class="lp-nav-link retro-btn">{{ link.label }}</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="lp-hero-content">
+    <h1 class="arcade-title animated-neon">{{ hero.title }}</h1>
+    <p class="lp-slogan flicker">{{ hero.slogan }}</p>
+    <button class="lp-cta neon-btn" (click)="onCta()">
+      {{ hero.cta }}
+      <span class="cta-arrow">▶</span>
+    </button>
+  </div>
+</section>
+
+<!-- Game Preview Cards -->
+<section class="lp-games-grid">
+  <article
+    class="game-card neon-border animated-card"
+    *ngFor="let game of games"
+    tabindex="0"
+    aria-label="Game Card"
+  >
+    <div class="game-img-wrap">
+      <img [src]="game.img" [alt]="game.title" class="game-img" />
+    </div>
+    <h2 class="game-title">{{ game.title }}</h2>
+    <p class="game-desc">{{ game.desc }}</p>
+    <a [routerLink]="['/games']" class="card-play-btn neon-btn">Play</a>
+  </article>
+</section>
+
+<!-- Daily Content Area -->
+<section class="lp-daily">
+  <h3 class="lp-daily-title arcade-section">FunZone Daily 💡</h3>
+  <div class="lp-daily-grid">
+    <div class="lp-daily-cell retro-box">
+      <span class="lp-daily-label">Quote</span>
+      <p class="lp-daily-content" *ngIf="quote; else loadingQuote">{{ quote }}</p>
+      <ng-template #loadingQuote><span class="lp-loading">Loading...</span></ng-template>
+    </div>
+    <div class="lp-daily-cell retro-box">
+      <span class="lp-daily-label">Joke</span>
+      <p class="lp-daily-content" *ngIf="joke; else loadingJoke">{{ joke }}</p>
+      <ng-template #loadingJoke><span class="lp-loading">Loading...</span></ng-template>
+    </div>
+    <div class="lp-daily-cell retro-box highlight">
+      <span class="lp-daily-label">Daily Challenge</span>
+      <p class="lp-daily-content">{{ dailyChallenge }}</p>
+      <button class="lp-daily-cta neon-btn" (click)="onDailyChallengeNavigate()">Try Today's!</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="lp-footer">
+  <div class="footer-left">
+    <button class="dark-toggle retro-btn" (click)="toggleDarkMode()" [attr.aria-pressed]="isDarkMode">
+      <span class="dark-icon">{{ isDarkMode ? '🌙' : '☀️' }}</span> 
+      {{ isDarkMode ? 'Dark Mode ON' : 'Dark Mode OFF' }}
+    </button>
+    <span class="footer-credits">Made with <span class="heart">❤</span> by MiniMayhem Team &nbsp;|&nbsp; 
+      <a href="https://github.com/minimayhem" target="_blank">GitHub</a>
+    </span>
+  </div>
+  <nav class="footer-nav">
+    <a routerLink="/about" class="footer-link">About</a>
+    <a routerLink="/contact" class="footer-link">Contact</a>
+    <a routerLink="/help" class="footer-link">Help</a>
+  </nav>
+</footer>

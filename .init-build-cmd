@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/minimayhem-arcade-hub-28484-0cc56206/minimayhem_arcade_hub"
+}
