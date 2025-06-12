@@ -22,9 +22,112 @@ chunk-6XEG6CM6.mjs   | -                |  23.02 kB |
 server.mjs           | server           |   1.39 kB | 
 main.server.mjs      | main.server      | 800 bytes | 
 
-Application bundle generation complete. [2.315 seconds]
+Application bundle generation complete. [2.237 seconds]
 
 Watch mode enabled. Watching for file changes...
 NOTE: Raw file sizes do not reflect development server per-request transformations.
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.17.0.2:3000/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.549 seconds]
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/landing-page/landing-page.component.html:6:10:
+      6 │       <a *ngFor="let link of navLinks" [routerLink]="link.path" cla...
+        ╵           ~~~~~
+
+  Error occurs in the template of component LandingPageComponent.
+
+    src/app/landing-page/landing-page.component.ts:6:15:
+      6 │   templateUrl: './landing-page.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/landing-page/landing-page.component.html:28:5:
+      28 │     *ngFor="let game of games"
+         ╵      ~~~~~
+
+  Error occurs in the template of component LandingPageComponent.
+
+    src/app/landing-page/landing-page.component.ts:6:15:
+      6 │   templateUrl: './landing-page.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/landing-page/landing-page.component.html:47:35:
+      47 │ ... <p class="lp-daily-content" *ngIf="quote; else loadingQuote">{...
+         ╵                                  ~~~~
+
+  Error occurs in the template of component LandingPageComponent.
+
+    src/app/landing-page/landing-page.component.ts:6:15:
+      6 │   templateUrl: './landing-page.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/landing-page/landing-page.component.html:52:35:
+      52 │ ... <p class="lp-daily-content" *ngIf="joke; else loadingJoke">{{ ...
+         ╵                                  ~~~~
+
+  Error occurs in the template of component LandingPageComponent.
+
+    src/app/landing-page/landing-page.component.ts:6:15:
+      6 │   templateUrl: './landing-page.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'routerLink' since it isn't a known property of 'a'. [plugin angular-compiler]
+
+    src/app/landing-page/landing-page.component.html:6:39:
+      6 │ ...t link of navLinks" [routerLink]="link.path" class="lp-nav-link ...
+        ╵                        ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component LandingPageComponent.
+
+    src/app/landing-page/landing-page.component.ts:6:15:
+      6 │   templateUrl: './landing-page.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'routerLink' since it isn't a known property of 'a'. [plugin angular-compiler]
+
+    src/app/landing-page/landing-page.component.html:37:7:
+      37 │     <a [routerLink]="['/games']" class="card-play-btn neon-btn">Pl...
+         ╵        ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component LandingPageComponent.
+
+    src/app/landing-page/landing-page.component.ts:6:15:
+      6 │   templateUrl: './landing-page.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+polyfills.js         | polyfills        |  90.20 kB | 
+main.js              | main             |  48.96 kB | 
+styles.css           | styles           |  95 bytes | 
+
+                     | Initial total    | 139.26 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+polyfills.server.mjs | polyfills.server | 572.91 kB | 
+chunk-6ZZJO7OD.mjs   | -                |  49.49 kB | 
+server.mjs           | server           |   1.39 kB | 
+main.server.mjs      | main.server      | 800 bytes | 
+
+Application bundle generation complete. [0.491 seconds]
+
+Page reload sent to client(s).

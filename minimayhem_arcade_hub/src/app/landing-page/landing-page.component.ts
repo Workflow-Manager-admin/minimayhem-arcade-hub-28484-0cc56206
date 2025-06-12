@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 // PUBLIC_INTERFACE
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
-  standalone: true
+  standalone: true,
+  imports: [CommonModule, RouterModule]
 })
 export class LandingPageComponent implements OnInit {
   logo = '/assets/logo-mm.png'; // Placeholder; update with actual path.
